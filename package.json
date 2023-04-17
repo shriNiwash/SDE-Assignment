@@ -1,0 +1,23 @@
+{
+  "name": "inida_job",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "shriniwash",
+  "license": "ISC",
+  "dependencies": {
+    "@theinternetfolks/snowflake": "^1.3.0",
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.3",
+    "nodemon": "^2.0.22",
+    "snowflake-generator": "^1.0.2",
+    "validator": "^13.9.0"
+  }
+}
