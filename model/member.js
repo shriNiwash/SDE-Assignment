@@ -2,10 +2,10 @@ const mongoose = require('mongoose');
 
 const memberSchema = mongoose.Schema({
     _id: {
-        type : String,
+        type: String,
         required: true
     },
-    community : {
+    community: {
         type: String,
         ref: 'community',
         required: true
@@ -13,21 +13,21 @@ const memberSchema = mongoose.Schema({
 
     user: {
         type: String,
-        ref : 'modelUser',
-        required:true
+        ref: 'modelUser',
+        required: true
     },
-    role :{
+    role: {
         type: String,
         required: true,
-        ref : 'roleModel'
+        ref: 'roleModel'
     },
-    created_at :{
+    created_at: {
         type: Date,
         default: Date.now
     }
 
-},{_id:false , versionKey: false });
+}, { _id: false, versionKey: false });
 
-const member = mongoose.model("member",memberSchema);
+const member = mongoose.model("member", memberSchema);
 
 module.exports = member;
