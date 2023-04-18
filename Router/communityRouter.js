@@ -18,9 +18,6 @@ communityRouter.use(express.urlencoded({ extended: false }));
 communityRouter.use(cookieParser());
 
 
-communityRouter.get("/hello", auth, (req, res) => {
-    res.send("hello there i am authenticated");
-})
 
 communityRouter.post("/community", auth, async (req, res) => {
     try {
@@ -73,7 +70,7 @@ communityRouter.post("/community", auth, async (req, res) => {
         })
     }
     catch (error) {
-        res.status(401).json({ message: "shriniwash" })
+        res.status(401).json({ message: "Unauthorized access" })
     }
 
 })
