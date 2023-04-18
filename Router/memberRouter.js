@@ -6,6 +6,7 @@ const key = require('@theinternetfolks/snowflake');
 const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser');
 const authenticate = require('../middleware/mainMiddleware');
+const authenticateMiddleware = require('../middleware/deleteMiddleware');
 
 
 memberRouter.use(bodyparser.json());
@@ -36,6 +37,12 @@ memberRouter.post("/member",authenticate,async(req,res)=>{
     }
 
     
+})
+
+memberRouter.delete("/member/:id",authenticateMiddleware,(req,res)=>{
+    // const delete = await member.delete({_id:})
+    console.log("deleted");
+    res.send("deleted");
 })
 
 
